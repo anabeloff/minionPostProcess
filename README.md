@@ -3,11 +3,10 @@ Pipeline for miniON data demultiplexing and trimming
 ====================================================
 
 The pipeline uses [SnakeMake](https://snakemake.readthedocs.io/en/stable/index.html) to run [DeepBinner](https://github.com/rrwick/Deepbinner) to classify and bin FASTQ reads and [PoreChop](https://github.com/rrwick/Porechop) to trimm barecodes. Additionally classification with Deepbinned requires [multi_to_single_fast5](https://github.com/nanoporetech/ont_fast5_api) from Nanopore.  
-All tools will be installed in the Conda environment provided with the pipeline.
 
+Current version does not include Porechop trimm. It will be added later.
 
-Dependencies
-============
+## Dependencies
 
 First install Snakemake with conda or pip. Remember that other dependacies work only with pip.
 
@@ -26,12 +25,12 @@ Install Deepbinner from Github sourse.
 pip3 install git+https://github.com/rrwick/Deepbinner.git
 ```
 
-Install Nanopore tools kit.
+Install Nanopore tool kit.
 ```
 pip install ont-fast5-api
 ```
 
-Usage
-=====
+## Usage
+
 
 
