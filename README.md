@@ -6,10 +6,32 @@ The pipeline uses [SnakeMake](https://snakemake.readthedocs.io/en/stable/index.h
 All tools will be installed in the Conda environment provided with the pipeline.
 
 
-Before you start
-================
+Dependencies
+============
 
-It is recommended to run Snakemake to create Conda environment first.  
+First install Snakemake with conda or pip. Remember that other dependacies work only with pip.
+
+```
+conda install -c bioconda -c conda-forge snakemake
 ```
 
+Install TensorFlow.  
+It is a main dependancy of Deepbinner.
 ```
+# If you working in Python 3+ environment use pip, it is the same as pip3
+pip3 install tensorflow
+```
+Install Deepbinner from Github sourse.
+```
+pip3 install git+https://github.com/rrwick/Deepbinner.git
+```
+
+Install Nanopore tools kit.
+```
+pip install ont-fast5-api
+```
+
+Usage
+=====
+
+

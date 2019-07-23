@@ -1,0 +1,8 @@
+name: MPP
+channels:
+  - conda-forge
+  - bioconda
+  - etetoolkit
+  - defaults
+prefix: /home/belova/anaconda3/envs/MPP
+
