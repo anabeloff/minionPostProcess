@@ -20,6 +20,9 @@ fast5_dir: "fast5"
 # FASTQ files after Guppy basecalling.
 fastq_dir: "fastq"
 
+# Porechop options
+extra_end_trim: 7
+
 # Repository URL:
 repo: "https://github.com/anabeloff/minionPostProcess"
 
