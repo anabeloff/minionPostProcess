@@ -1,0 +1,43 @@
+The flag 'directory' used in rule all is only valid for outputs, not inputs.
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	all
+	1	deepbinner_bin
+	1	deepbinner_classify
+	3
+
+[Tue Jul 23 10:55:52 2019]
+rule deepbinner_classify:
+    output: mpp_output_dir/fast5_both, mpp_output_dir/merged.fastq, mpp_output_dir/classification, mpp_output_dir/fast5_single
+    jobid: 1
+
+[Tue Jul 23 10:56:28 2019]
+Error in rule deepbinner_classify:
+    jobid: 1
+    output: mpp_output_dir/fast5_both, mpp_output_dir/merged.fastq, mpp_output_dir/classification, mpp_output_dir/fast5_single
+    shell:
+        
+       mkdir mpp_output_dir/fast5_both
+       echo "STEP 1.1 - Copy all (pass and fail) FAST5 files into one directory."
+       find fast5/ -name \*.fast5 -exec cp {} mpp_output_dir/fast5_both/ \;
+       
+       echo "STEP 1.2 - Merge all FASTQ sequences into one file."
+       cat fastq/*.fastq > mpp_output_dir/merged.fastq
+
+       echo "STEP 2.1 - Multi directory to single."
+       multi_to_single_fast5 -t 1 -i mpp_output_dir/fast5_both -s mpp_output_dir/fast5_single
+
+       echo "STEP 2.2 - Deepbinner classification."
+       deepbinner classify --native mpp_output_dir/fast5_single > mpp_output_dir/classification
+    
+        (exited with non-zero exit code)
+
+Removing output files of failed job deepbinner_classify since they might be corrupted:
+mpp_output_dir/fast5_both, mpp_output_dir/merged.fastq, mpp_output_dir/classification, mpp_output_dir/fast5_single
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: /media/F/anatoly_data/minion_pipe/minionPostProcess/.snakemake/log/2019-07-23T105552.269157.snakemake.log

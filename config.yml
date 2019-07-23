@@ -1,0 +1,26 @@
+---
+## General pipeline parameters:
+
+# Name of the pipeline:
+pipeline: "minion_postprocess"
+
+# ABSOLUTE path to directory holding the working directory:
+# workindDirectory: "/path/to/work_dir/"
+workindDirectory: "/home/belova/anatoly_data/minion_pipe/"
+# Results directory inside working directory:
+resdir: "mpp_output_dir"
+
+# FAST5 directory.
+# Inside working directory.
+# Directory with all FAST5 files.
+# Subdirectories allowed.
+fast5_dir: "fast5"
+
+# FASTQ directory.
+# FASTQ files after Guppy basecalling.
+fastq_dir: "fastq"
+
+# Repository URL:
+repo: "https://github.com/anabeloff/minionPostProcess"
+
+threads: 12

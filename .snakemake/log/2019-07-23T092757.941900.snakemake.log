@@ -1,0 +1,13 @@
+The flag 'directory' used in rule all is only valid for outputs, not inputs.
+Building DAG of jobs...
+Creating conda environment minionPostProcess/envs/deepbinner_env.yml...
+Downloading remote packages.
+CreateCondaEnvironmentException:
+Could not create conda environment from /media/F/anatoly_data/minion_pipe/minionPostProcess/envs/deepbinner_env.yml:
+Collecting package metadata (repodata.json): ...working... done
+Solving environment: ...working... failed
+
+ResolvePackageNotFound: 
+  - openblas==0.3.5=h9ac9557_1001
+
+
