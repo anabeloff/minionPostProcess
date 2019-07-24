@@ -55,7 +55,7 @@ Before you launch edit `config.yml`
 The pipeline outputs following directories:
 
  - `fastq` - Contains Deepbinner binned FASTQ files by barcode.
- - `fastq_trimmed` - Contains timmed by Porechop barcoded files.
+ - `fastq_trimmed` - Contains timmed by Porechop barcoded FASTQ files.
 
 File outputs:
 
