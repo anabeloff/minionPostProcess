@@ -1,8 +1,8 @@
 
-Pipeline for miniON data demultiplexing and trimming
-====================================================
+Nanopore data demultiplexing and trimming
+=========================================
 
-The pipeline uses [SnakeMake](https://snakemake.readthedocs.io/en/stable/index.html) (version 5+) to run [DeepBinner](https://github.com/rrwick/Deepbinner) to classify and bin FASTQ reads and [PoreChop](https://github.com/rrwick/Porechop) to trimm barecodes. Additionally classification with Deepbinned requires [multi_to_single_fast5](https://github.com/nanoporetech/ont_fast5_api) from Nanopore toolkit.  
+The pipeline uses [SnakeMake](https://snakemake.readthedocs.io/en/stable/index.html) (version 5+) to run [DeepBinner](https://github.com/rrwick/Deepbinner) to classify and bin FASTQ reads and [PoreChop](https://github.com/rrwick/Porechop) to trimm barecodes. Additionally classification with Deepbinner requires [multi_to_single_fast5](https://github.com/nanoporetech/ont_fast5_api) from Nanopore toolkit.  
 
 ## Dependencies
 
