@@ -34,10 +34,10 @@ rule deepbinner_classify:
        fastq = directory(config["fastq_dir"]),
        fast5 = directory(config["fast5_dir"])
     output:
-       both = directory(expand("{res}/fast5_both", res = directory(config["resdir"]))),
+       both = temp(directory(expand("{res}/fast5_both", res = directory(config["resdir"])))),
        fastq_merged = expand("{res}/merged.fastq", res = directory(config["resdir"])),
        classification_file = expand("{res}/classification", res = directory(config["resdir"])),
-       single = directory(expand("{res}/fast5_single", res = directory(config["resdir"])))
+       single = temp(directory(expand("{res}/fast5_single", res = directory(config["resdir"]))))
     conda: "envs/deepbinner_env.yml"
     threads: config["threads"]
     shell: """
