@@ -35,15 +35,15 @@ pip3 install git+https://github.com/rrwick/Porechop.git
 
 ## Usage
 
-To start a pipilene issue following command:
+To start the pipilene issue following command:
 ```
 snakemake -s Snakefile
 ```
 
-Here you need to provide path to a `Snakefile`. Configuration file `config.yml` must be in the same directory with `Snakefile`. Alternativly you can add option `snakemake -s Snakefile --configfile /path/to/config.yml` providing a path to configuration file.  
+Here you need to provide a path to a `Snakefile`. Configuration file `config.yml` must be in the same directory with `Snakefile`. Alternatively you can issue a command `snakemake -s Snakefile --configfile /path/to/config.yml` providing a path to configuration file.  
 
 #### INPUT
-Before the launch edit `config.yml` 
+Before you launch edit `config.yml` 
 
  - `workindDirectory` - ABSOLUTE path to a working directory.
  - `fast5_dir` - Directory name with FAST5 files. MUST be inside working directory.
@@ -60,7 +60,7 @@ The pipeline outputs following directories:
 File outputs:
 
  - `classification` - Deepbinner classification of FAST5 files.
- - `full_len.fastq` - File contain Porechop trimmed sequences that have barcodes on both ends. 
+ - `full_len.fastq` - File contains Porechop trimmed sequences that have barcodes on both ends. Full length sequences (useful for RNA-seq).
  - `merged.fastq` - Input FASTQ files merged into one file.
 
 
