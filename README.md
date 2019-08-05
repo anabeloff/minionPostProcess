@@ -21,6 +21,9 @@ pip3 install tensorflow
 Install Deepbinner from Github sourse.
 ```
 pip3 install git+https://github.com/rrwick/Deepbinner.git
+
+# In case Bin gives errors 
+pip3 install git+https://github.com/jdeligt/Deepbinner.git@patch-1
 ```
 
 Install Nanopore tool kit.
